@@ -1,0 +1,40 @@
+﻿@model List<MyPortfolioProject.Models.Contact>
+@{
+    ViewBag.Title = "Inbox";
+    Layout = "~/Views/Admin/Index.cshtml";
+    int count = 0;
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Gonderen</th>
+        <th>Tarih</th>
+        <th>Konu</th>
+        <th>Durum</th>
+        <th>Mesaji Ac</th>
+        <th>Mesaji Sil</th>
+    </tr>
+    @foreach( var item in Model)
+    {
+        count++;
+        <tr>
+            <td>@count</td>
+            <td>@item.NameSurname</td>
+            <td>@item.SendDate</td>
+            <td>@item.Subject</td>
+            @if (item.IsRead == false)
+            {
+                <td><a href="/Message/ChangeMessageToTrue/@item.ContactId" class="btn btn-info">Okundu olarak isaretle</a></td>
+            }
+            else
+            {
+                <td><a href="/Message/ChangeMessageToFalse/@item.ContactId" class="btn btn-dark">Okunmadi olarak isaretle</a></td>
+            }
+            <td><a href="#" class="btn-warning">Mesaji Ac</a></td>
+            <td><a href="#" class="btn-danger">Mesaji Sil</a></td>
+        </tr>
+    }
+
+
+</table>

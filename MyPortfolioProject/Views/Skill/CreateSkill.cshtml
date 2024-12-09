@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "CreateSkill";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h2 class="mb-4">Yeni Yetenek Ekleme Sayfasi</h2>
+
+<form method="post">
+
+    <label>Yetenek Basligi</label>
+    <input type="text" name="SkillName" class="form-control"/>
+    <br />
+    <label>Yetenek Degeri</label>
+    <input type="number" name="Rate" class="form-control"/>
+    <br />
+    <button class="btn btn-info">Yetenegi Ekle</button>
+</form>
+

@@ -14,35 +14,16 @@
 
         @Html.Action("PartialSideBar", "Admin")
 
-        <!-- Page Content  -->
         <div id="content" class="p-4 p-md-5">
 
             @Html.Action("PartialNavbar", "Admin")
 
-
-
-            <h2 class="mb-4">Sidebar #01</h2>
-            <table class=" table table-bordered"
-                 <tr>
-                     <th> Product Id </th>
-                     <th> Product Name </th>
-                     <th> Category </th>
-                     <th> Delete </th>
-                     <th> Update </th>
-                 </tr>
-                 <tr>
-                     <td>A256874</td>
-                     <td>Tomato</td>
-                     <td>Vegetable</td>
-                     <td><button class="btn btn-danger">Delete</button></td>
-                     <td><button class="btn btn-success">Update</button></td>
-
-                 </tr>
+            @RenderBody()
 
         </div>
     </div>
-    @Html.Action("PartialScripts","Admin")
-   
+    @Html.Action("PartialScripts", "Admin")
+
 </body>
 </html>
 
