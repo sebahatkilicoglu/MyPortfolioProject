@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+
+<h2 class="mb-4"> Istatistikler</h2>
+<div class="alert alert-success">Toplam Mesaj Sayisi: <b>@ViewBag.totalMessageCount</b> </div>
+<div class="alert alert-danger">Toplam Okunmus Mesaj Sayisi: <b>@ViewBag.messageIsReadTrueCount</b> </div>
+<div class="alert alert-warning">Toplam Okunmamis Mesaj Sayisi: <b>@ViewBag.messageIsReadFalseCount</b> </div>
+<div class="alert alert-primary">Yetenek Sayisi: <b>@ViewBag.skillCount</b> </div>
+<div class="alert alert-dark">Yeteneklerin Toplam Puani: <b>@ViewBag.skillRateSum</b> </div>
+<div class="alert alert-info">Yeteneklerin Ortalama Puani: <b>@ViewBag.skillRateAvg</b> </div>
+<div class="alert alert-info" style="background-color:#ffd800 ">En Yuksek Puanli Yetenek: <b>@ViewBag.maxRateSkillName</b> </div>
+<div class="alert alert-info" style="background-color:#0094ff ">Referans Konulu Mesaj Sayisi: <b>@ViewBag.getMessageCountBySubjectReferences</b> </div>
+<div class="alert alert-info" style="background-color:#b6ff00 ">Icinde S Harfi Iceren Okunmus Mesaj Sayisi: <b>@ViewBag.getMessageCountByEmailContainSAndIsReadTrue</b> </div>
+<div class="alert alert-info" style="background-color:#ff0005 ">Degeri 90 olan Yetenek Adi: <b>@ViewBag.getSkillNameByRate90</b> </div>
+
